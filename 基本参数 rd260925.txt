@@ -1,0 +1,48 @@
+
+c_{u}\left(p_{ce},t_{cu}\right)=\sum_{n=0}^{p_{ce}.\operatorname{count}\left(\right)-1}\operatorname{nCr}\left(p_{ce}.\operatorname{count}\left(\right)-1,n\right)\left(1-t_{cu}\right)^{\left(p_{ce}.\operatorname{count}\left(\right)-n-1\right)}t_{cu}^{n}\left(p_{ce}\left[n+1\right]\right)
+
+c_{u2}\left(l_{0},t_{0}\right)=c_{u}\left(l_{0}\left[3i-2...3i+1\right],c_{ut}\left(0,t_{0}-i+1,1\right)\right)\operatorname{for}i=\left[1...\operatorname{floor}\left(\frac{l_{0}.\operatorname{count}\left(\right)}{3}\right)\right]
+
+j_{z}\left(t_{jz},f_{jz},x_{jz},y_{jz}\right)=\left(f_{jz}\sin\left(-t_{jz}+\frac{\pi}{2}\right)+x_{jz},f_{jz}\cos\left(-t_{jz}+\frac{\pi}{2}\right)+y_{jz}\right)
+
+r_{o}\left(x_{0},y_{0},r_{0},t_{0}\right)=\left(r_{0}\sin t_{0}+x_{0},r_{0}\cos t_{0}+y_{0}\right)
+
+l_{z}\left(a_{0},b_{0},n_{0},t_{0}\right)=\left(r_{a}\left(a_{0}.x,b_{0}.x,n_{0},t_{0},3\right),r_{a}\left(a_{0}.y,b_{0}.y,n_{0},t_{0}+1,3\right)\right)
+
+l_{zm}\left(a_{0},b_{0},c_{0},d_{0},n_{0},t_{0},s_{0}\right)=\left(m_{o}\left(a_{0}.x,\left(p_{0}+t_{0}c_{0}z_{0}\right).x,b_{0}.x\right),m_{o}\left(a_{0}.y,\left(p_{0}+t_{0}c_{0}z_{0}\right).y,b_{0}.y\right)\right)\operatorname{with}p_{0}=l_{z}\left(a_{0},b_{0},n_{0},s_{0}\right),z_{0}=\operatorname{sort}\left(r_{a}\left(1,d_{0}+1,n_{0},s_{0}+2,2\right)\right)
+
+c_{ut}\left(a_{cut},b_{cut},c_{cut}\right)=\max\left(a_{cut},\min\left(b_{cut},c_{cut}\right)\right)
+
+i_{c}\left(A_{0},a_{0},B_{0}\right)=\left\{i<a_{0}:A_{0}\left[i\right],\left\{a_{0}\le i<a_{0}+B_{0}.\operatorname{count}\left(\right):B_{0}\left[i-a_{0}+1\right],A_{0}\left[i-B_{0}.\operatorname{count}\left(\right)\right]\right\}\right\}\operatorname{for}i=\left[1...A_{0}.\operatorname{count}\left(\right)+B_{0}.\operatorname{count}\left(\right)\right]
+
+d_{el}\left(A_{0},a_{0},b_{0}\right)=\left\{i<a_{0}:A_{0}\left[i\right],A_{0}\left[i+b_{0}\right]\right\}\operatorname{for}i=\left[1...A_{0}.\operatorname{count}\left(\right)-b_{0}\right]
+
+r_{p}\left(A_{0},a_{0},B_{0}\right)=\left\{a_{0}\le i\le a_{0}+B_{0}.\operatorname{count}\left(\right)-1:B_{0}\left[i-a_{0}+1\right],A_{0}\left[i\right]\right\}\operatorname{for}i=\left[1...\max\left(A_{0}.\operatorname{count}\left(\right),B_{0}.\operatorname{count}\left(\right)+a_{0}-1\right)\right]
+
+z_{h}\left(l_{0},a_{0}\right)=\operatorname{sort}\left(l_{0},\left(j\operatorname{for}j=\left[1...\frac{l_{0}.\operatorname{count}\left(\right)}{a_{0}}\right],i=\left[1...a_{0}\right]\right)\right)
+
+t_{c}\left(t_{0},t_{end},t_{now}\right)=c_{ut}\left(0,\frac{t_{now}-t_{0}}{t_{end}-t_{0}},1\right)
+
+f_{r}\left(x\right)=\operatorname{random}\left(\right)
+
+m_{s}\left(l_{0},a_{0},b_{0},c_{0}\right)=\left(\left\{b_{0}\left[j\right]=0:d_{0}\left[\left(i-1\right)p_{0}+j\right],l_{0}\left[\left(i-1\right)a_{0}+b_{0}\left[j\right]\right]\right\}\operatorname{for}j=\left[1...p_{0}\right],i=\left[1...\operatorname{ceil}\left(\frac{l_{0}.\operatorname{count}\left(\right)}{a_{0}}\right)\right]\right)\operatorname{with}d_{0}=c_{0}.\operatorname{join}\left(0\operatorname{for}i=\left[1...\operatorname{ceil}\left(\frac{l_{0}.\operatorname{count}\left(\right)}{a_{0}}\right)b_{0}.\operatorname{count}\left(\right)-c_{0}.\operatorname{count}\left(\right)\right]\right),p_{0}=b_{0}.\operatorname{count}\left(\right)
+
+s_{e}\left(l_{0},a_{0}\right)=\operatorname{sort}\left(\left[1...l_{0}.\operatorname{count}\left(\right)\right],\left|l_{0}-a_{0}\right|\right)\left[1\right]
+
+f_{d}\left(l_{0},a_{0}\right)=b_{0}\left[l_{0}=a_{0}\right]\operatorname{with}b_{0}=\left[1...l_{0}.\operatorname{count}\left(\right)\right]
+
+r_{a}\left(a_{0},b_{0},n_{0},t_{0},r_{0}\right)=\operatorname{round}\left(l\left(a_{0},b_{0},\operatorname{random}\left(n_{0},t_{0}\right)\right),r_{0}\right)
+
+t_{e}\left(a_{0},b_{0},n_{0},c_{0}\right)=a_{0}+\left(b_{0}i+\frac{1}{2}c_{0}b_{0}i^{2}\right)\operatorname{for}i=\left[0...n_{0}\right]
+
+m_{o}\left(a_{0},b_{0},c_{0}\right)=\operatorname{mod}\left(b_{0}-a_{0},c_{0}-a_{0}\right)+a_{0}
+
+f_{l}\left(x\right)=\left\{x\le0:0,x\ge1:1,\left[x,\operatorname{floor}\left(x\right),1-\cos\left(\frac{x\pi}{2}\right),\sin\left(\frac{x\pi}{2}\right),-\frac{\cos\left(\pi x\right)-1}{2},x^{2},1-\left(1-x\right)^{2},\left\{x<0.5:2x^{2},1-\frac{\left(-2x+2\right)^{2}}{2}\right\},x^{3},1-\left(1-x\right)^{3},\left\{x<0.5:4x^{3},1-\frac{\left(-2x+2\right)^{3}}{2}\right\},x^{4},1-\left(1-x\right)^{4},\left\{x<0.5:8x^{4},1-\frac{\left(-2x+2\right)^{4}}{2}\right\},x^{5},1-\left(1-x\right)^{5},\left\{x<0.5:16x^{5},1-\frac{\left(-2x+2\right)^{5}}{2}\right\},2^{10x-10},1-2^{-10x},\left\{x<0.5:\frac{2^{20x-10}}{2},\frac{2-2^{-20x+10}}{2}\right\},1-\sqrt{1-x^{2}},\sqrt{1-\left(x-1\right)^{2}},\left\{x<0.5:\frac{1-\sqrt{1-4x^{2}}}{2},\frac{\sqrt{1-\left(-2x+2\right)^{2}}+1}{2}\right\},c_{03}x^{3}-c_{01}x^{2},1+c_{03}\left(x-1\right)^{3}+c_{01}\left(x-1\right)^{2},\left\{x<0.5:\frac{4x^{2}\left(2\left(c_{02}+1\right)x-c_{02}\right)}{2},\frac{\left(2x-2\right)^{2}\left(\left(c_{02}+1\right)\left(2x-2\right)+c_{02}\right)+2}{2}\right\},\left\{x\ge1:1,-2^{10x-10}\sin\left(\left(10x-10.75\right)c_{04}\right)\right\},\left\{x\ge1:1,2^{-10x}\sin\left(\left(10x-0.75\right)c_{04}\right)+1\right\},\left\{x<0.5:-\frac{2^{20x-10}\sin\left(\left(20x-11.125\right)c_{05}\right)}{2},\frac{2^{-20x+10}\sin\left(\left(20x-11.125\right)c_{05}\right)}{2}+1\right\},1-f_{l1}\left(1-x\right),f_{l1}\left(x\right),\left\{x<0.5:\frac{1-f_{l1}\left(1-2x\right)}{2},\frac{1+f_{l1}\left(2x-1\right)}{2}\right\}\right]\operatorname{with}c_{01}=1.70158,c_{02}=2.5949095,c_{03}=2.70158,c_{04}=\frac{2\pi}{3},c_{05}=\frac{2\pi}{4.5}\right\}
+
+f_{l1}\left(x\right)=\left\{x<\frac{1}{2.75}:7.5625x^{2},x<\frac{2}{2.75}:7.5625\left(x-\frac{1.5}{2.75}\right)^{2}+0.75,x<\frac{2.5}{2.75}:7.5625\left(x-\frac{2.25}{2.75}\right)^{2}+0.9375,7.5625\left(x-\frac{2.625}{2.75}\right)^{2}+0.984375\right\}
+
+l\left(s_{tart},e_{nd},t_{0}\right)=t_{0}\left(e_{nd}-s_{tart}\right)+s_{tart}
+
+m\left(t_{m0},v_{m0},t_{m1},v_{m1},t_{now},w_{ay}\right)=l\left(v_{m0},v_{m1},f_{0}\left(t_{c}\left(t_{m0},t_{m1},t_{now}\right)\right)\left[w_{ay}\right]\right)
+
+m_{2}\left(l_{m},t_{now}\right)=\left\{s_{m}\le5:m\left(l_{m}\left[1\right],l_{m}\left[2\right],l_{m}\left[3\right],l_{m}\left[4\right],t_{now},l_{m}\left[5\right]\right),\left\{t_{now}<l_{m}\left[s_{m}-4\right]:m_{2}\left(l_{m}\left[1...s_{m}-5\right],t_{now}\right),l\left(l_{m}\left[s_{m}-3\right],l_{m}\left[s_{m}-1\right],f_{0}\left(t_{c}\left(l_{m}\left[s_{m}-4\right],l_{m}\left[s_{m}-2\right],t_{now}\right)\right)\left[l_{m}\left[s_{m}\right]\right]\right)\right\}\right\}\operatorname{with}s_{m}=l_{m}.\operatorname{count}\left(\right)
