@@ -1,5 +1,7 @@
 ## 基于 desmos 的动画设计辅助工具
 
+**[English](readme-en.md)**
+
 本项目是一套**Desmos自定义函数库**，封装大量预制函数，可直接在 Desmos 图形计算器快速制作几何动画、粒子特效、参数化图形，简化动画创作流程。
 
 ### 🎬 [工程链接（已经加载好全部函数库，可以直接体验）](https://www.desmos.com/geometry/nsi2zipg3w)
